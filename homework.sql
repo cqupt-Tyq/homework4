@@ -1,4 +1,4 @@
-/*µÚÒ»Ìâ*/
+/*ç¬¬ä¸€é¢˜*/
 create table emoloyees1
 (
     emp_no     int         null,
@@ -23,7 +23,7 @@ from
     emoloyees1;
 
 
-/*µÚ¶şÌâ*/
+/*ç¬¬äºŒé¢˜*/
 
 select
     f.film_id,f.title
@@ -34,14 +34,14 @@ from
                           f.film_id=fc.film_id
 where fc.film_id is null ;
 
-/*µÚÈıÌâ*/
+/*ç¬¬ä¸‰é¢˜*/
 
 select *
 from  employees limit 5,5;
 
 
 
-/*µÚËÄÌâ*/
+/*ç¬¬å››é¢˜*/
 CREATE TABLE actor  (
                         actor_id  smallint(5)  NOT NULL PRIMARY KEY,
                         first_name  varchar(45) NOT NULL,
@@ -52,10 +52,10 @@ create index idx_lastname on actor(last_name);
 
 
 
-/*µÚÎåÌâ*/
+/*ç¬¬äº”é¢˜*/
 create table passing_number(
-                               id int PRIMARY KEY ,
-                               number int
+              id int PRIMARY KEY ,
+              number int null
 );
 insert into passing_number VALUES (1,4);
 insert into passing_number VALUES (2,3);
