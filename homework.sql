@@ -46,7 +46,9 @@ CREATE TABLE actor  (
                         actor_id  smallint(5)  NOT NULL PRIMARY KEY,
                         first_name  varchar(45) NOT NULL,
                         last_name  varchar(45) NOT NULL,
-                        last_update  datetime NOT NULL);
+                        last_update  datetime NOT NULL
+);
+
 create unique index uniq_idx_firstname on actor(first_name);
 create index idx_lastname on actor(last_name);
 
@@ -65,5 +67,6 @@ insert into passing_number VALUES (5,5);
 insert into passing_number VALUES (6,4);
 
 select id,number,
-       RANK() OVER (ORDER BY number DESC) as t_rank
-FROM passing_number;
+       DENSE_RANK() OVER (ORDER BY number DESC) as t_rank
+FROM passing_number
+ORDER BY t_rank,id;
